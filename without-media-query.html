@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title> <!-- Some Android mail clients display the title just before the preheader in the mail preview pane. We’re going to write our own title with <h1> -->
+	<style>
+		/* ====== Start reset ===== */
+		body {
+		margin: 0; /* Some email clients strip out padding and margins, while modern browsers typically add an 8 pixel margin on all sides. Setting both to zero gives us a consistent foundation. */
+		padding: 0;
+		}
+		table, td {
+		border-collapse: collapse; /* [border-collapse] and [border-spacing] remove some of the extra spacing that Outlook on the desktop sometimes adds to tables. */
+		border-spacing: 0;
+		margin: 0;
+		padding: 0;
+		}
+		img { /* Making images [block] prevents the gap that often appears below images. Setting the [line-height] further ensures that the images fit  into the layout. We also want to remove any borders from hyperlinked images. */
+		display: block;
+		border: 0 none;
+		outline: none;
+		text-decoration: none;
+		line-height: 100%;
+		}
+		/* ======== End reset ====== */
+
+		#wrapper {
+			margin: 0 auto;
+			min-width:320px; 	/* 320px is the width of iPhone 4 */
+			max-width: 640px; 	/* The outer table's width is hard-coded to 100% to make it full width on mobiles. However, we don't want full screen on Desktops. This overrides the card-coded width. MAX-WIDTH not supported by OUTLOOK, so, we use special wrappter tables for outlook */
+			display: block; 	/* Anytime we use max-width: property we also make this element block. */
+			color: #4d4d4d; 
+			background-color: #eeeeee;
+		}
+
+		h1, h2, h3, p {
+			font-family: sans-serif;
+		}
+		h1 {
+			font-weight: 200;
+			font-size: 30px;
+			color: #ffffff;
+		}
+		.header td {
+			padding-top: 16px;
+		}
+		a.button {
+			font-family: sans-serif;
+			font-size: 18px;
+			text-decoration: none;
+			color: #ffffff;
+			margin: 40px auto;
+			display: block;
+			border: 10px solid #000;
+			background-color: #000;
+			border-radius: 10px;
+			width: 160px;
+		}
+		h2 {
+			font-size: 24px;
+			padding-top: 10px;
+		}
+		h3 {
+		font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.footer td {
+			padding: 80px 0 20px;
+		}
+		.footer p, .footer a {
+			line-height: 10px;
+			font-size: 12px;
+			color: #999999;
+		}
+		.footer a {
+			text-decoration: underline;
+		}
+		.innerWrapper td {
+			padding: 20px 10px 0;
+		}
+
+		.headerColumn { 
+			max-width: 320px;
+			display: inline-block; /* Make the divs responsive */
+			vertical-align: middle; /* Set valign as desired. if left unspecified, the default alignment will be baseline which may cause unwanted space below images. */
+			padding: 0 10px;
+		}
+		
+		.imgColumn { 		
+			max-width: 170px;			
+			display: inline-block; /* Make the divs responsive */	
+			vertical-align: middle; /* Set valign as desired. if left unspecified, the default alignment will be baseline which may cause unwanted space below images. */
+		}
+		.textColumn { 
+			max-width: 420px;			
+			display: inline-block; /* Make the divs responsive */
+			vertical-align: middle;
+			/* We have <td dir="rtl" in this Element in the HTML. The [rtl] value tells the content to flow from right-to-left. Flow changes only 2 elemnts side-by-side  */
+			direction: ltr; /* Set the text direction to "right-to-left". We use rtl attribute for this element, and it that chagnes the flow. But, we don't want the text flow to change. This corrects it */
+		}
+
+		.socialLinksCol {/* Make the divs responsive */ 
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 320px;
+			padding: 10px;
+		}
+		
+		/* This mso class is only for testing only. it has borders to see how tables will look on OUTLOOK. Not needed in production emails */
+		.mso {
+			margin: 0 auto;
+			border: 3px dashed #999;
+		}
+
+</style>
+</head>
+<body>
+	
+<!--conditional  <table class="mso" width="640" align="center"><tr><td align="center"> -->
+<!--[if (gte mso 9)|(IE)]><table width="640" align="center"><tr><td align="center"><![endif]-->
+	<table id="wrapper" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+	    <tr>
+	        <td align="center" width="100%">
+
+	        	<!-- ================= 
+                header 
+                ================ -->
+	            <table  class="header" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+				    <tr>
+				        <td dir="rtl" bgcolor="#F1B81D" align="center" width="100%"> 
+<!--conditional <table class="mso" width="640"><tr><td width="50%" align="center">  -->
+<!--[if (gte mso 9) | (IE)]><table width="640"><tr><td width="50%" align="center"><![endif]-->
+				        	<div class="headerColumn">
+				            <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+							    <tr>
+							        <td align="center" width="100%">
+							            <h1>Kazandiran<br> Bahis Firmasi</h1>
+										<a class="button" href="http://www.wonodds.com/" target="_blank">
+                                        Hemen Uye Ol</a>
+							        </td>
+							    </tr>
+							</table>
+							</div> 
+<!--conditional </td><td class="mso" width="50%" align="center">  -->                          
+<!--[if(gte mso 9)|(IE)]></td><td width="50%" align="center"><![endif]-->
+							<div class="headerColumn">
+							<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+							    <tr>
+							        <td align="center" width="100%">
+							            <img src="img/logo2.png" width="278" height="293" alt="Dogr App">
+							        </td>
+							    </tr>
+							</table>
+							</div>
+<!--conditional </td></tr></table> -->                           
+<!--[if(gte mso 9)|(IE)]></td></tr></table><![endif]-->
+				        </td>
+				    </tr>
+				</table>
+
+
+				<!-- ============= 
+                content table 
+                =============== -->
+				<table  class="innerWrapper" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+				    <tr>
+				        <td align="center" width="100%">
+				            <h2>En y&#252;ksek oranlar!</h2>
+							<p>
+                            Wonodds ile T&#252;rkiyenin en y&#252;ksek bahis oranlar&#305;n&#305; kac&#305;rmay&#305;n! 
+                            En y&#252;ksek oranlar yan&#305;nda her kars&#305;lasmaya 
+                            700'den farkl&#305; bahis se&#231;enegi sunan T&#252;rkieyenin tek firmas&#305;y&#305;z.
+                            </p>
+							<!-- =============== 
+                            module 1 
+                            ========== -->
+							<table class="module"cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+								<tr>
+									<td dir="rtl" align="center" width="100%">
+<!--conditional <table class="mso" width="600"><tr><td width="30%" align="center"> -->                                   
+<!--[if(gte mso 9)|(IE)]><table width="600"><tr><td width="30%" align="center"><![endif]-->
+										<div class="imgColumn">
+										<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+										    <tr>
+										        <td align="center" width="100%">
+										            <img src="img/image1.png" width="150" alt="Penny" />
+										        </td>
+										    </tr>
+										</table>
+										</div>
+<!--conditional </td><td class="mso" width="70%" align="center"> -->                                       
+<!--[if(gte mso 9)|(IE)]></td><td  width="70%" align="center"><![endif]-->
+										<div class="textColumn">
+										<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+										    <tr>
+										        <td align="center" width="100%">
+										            <h3>%10 Paysafecard Bonusu</h3>
+													<p>
+                                                    Wonodds'un yeni para yatırma seçeneği ile yatıran kazanıyor! Paysafecard ile hızlıca para yatırın ve %10 bonus kazanın! 
+                                                    </p>
+
+										        </td>
+										    </tr>
+										</table>
+										</div>
+<!--conditional </td></tr></table>  -->                                      
+<!--[if(gte mso 9)|(IE)]></td></tr></table><![endif]-->
+									</td>
+								</tr>
+							</table>	
+
+							<!-- =============== 
+                            module 2 
+                            ============ -->
+							<table class="module"cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+								<tr>
+									<td align="center" width="100%">
+<!--conditional <table class="mso" width="600"><tr><td width="30%" align="center"> -->                                   
+<!--[if(gte mso 9)|(IE)]><table  width="600"><tr><td width="30%" align="center"><![endif]-->
+										<div class="imgColumn">
+										<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+										    <tr>
+										        <td align="center" width="100%">
+										            <img src="img/image2.png" width="150" alt="Oscar">
+										        </td>
+										    </tr>
+										</table>
+										</div>
+<!--conditional </td><td class="mso" width="70%" align="center">  -->                                      
+<!--[if(gte mso 9)|(IE)]></td><td width="70%" align="center"><![endif]-->
+										<div class="textColumn">
+										<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+										    <tr>
+										        <td align="center" width="100%">
+										            <h3> %50 Sanal Sporlar Geri Ödeme </h3>
+													<p>
+														Sanal Sporlarda toplam 100TL ve uzeri bahis yapin %50'sini size geri verelim! Bu bonustan yararlanmak için ilk defa Sanal Sporlarda bahis yapmanız gerekmektedir.                                                    
+                                                    </p>
+										        </td>
+										    </tr>
+										</table>
+										</div>
+<!--conditional </td></tr></table> -->                                       
+<!--[if(gte mso 9)|(IE)]></td></tr></table><![endif]-->										
+									</td>
+								</tr>
+							</table>		
+
+				        </td>
+				    </tr>
+				</table>
+                
+
+				<!-- ============== 
+                footer table 
+                ============== -->
+				<table  class="footer" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+				    <tr>
+				        <td align="center" width="100%">
+				            <p>Wonodds &#9829; 10 Numara Bahis Firması</p>
+							<p>&#169; Wonodds.</p>
+							<p>
+								<a href="http://www.wonodds.co/nws-dr/index.php?e=#E-mail#" target="_blank" title="unsubscribe">
+								e-bültenlerimizin gönderilmesini istemiyorsanız?</a> 
+							</p>
+				        </td>
+				    </tr>
+				</table>
+
+
+				<!-- Footer Links -->
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+					<tr>
+						<td align="center" width="100%" bgcolor="#EACB3C">
+<!--[if(gte mso 9)|(IE)]><table width="640"><tr><td width="50%" align="center"><![endif]--> 
+							<div class="socialLinksCol">
+							<table cellspacing="0" cellpadding="0" align="center" width="100%">
+								<tr>
+									<td align="center">
+										<a target="_blank" href="https://twitter.com/wonodds" title="wonodds">
+			                               <img src="img/twitter.png" alt="" border="0" width="43" height="43" style="display:block; border:none; outline:none; text-decoration:none;">
+			                            </a>
+									</td>
+								</tr>
+							</table> 
+							</div>	
+<!--[if(gte mso 9)|(IE)]></td><td width="50%" align="center"><![endif]-->
+							<div class="socialLinksCol">
+							<table cellspacing="0" cellpadding="0" align="center" width="100%">
+								<tr>
+									<td align="center" width="100%">										
+										<a target="_blank" href="https://tr-tr.facebook.com/Wonodds-Kazanc-Merkezi-202851119735284/" title="to wonodds">
+			                               <img src="img/facebook.png" alt="" border="0" width="43" height="43" style="display:block; border:none; outline:none; text-decoration:none;">
+			                            </a>			                            
+									</td>
+								</tr>
+							</table>							
+							</div>
+<!--[if(gte mso 9)|(IE)]></td></tr></table><![endif]-->						
+						</td>						
+					</tr>
+				</table>
+
+	        </td>
+	    </tr>
+	</table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+<!--conditional </td></tr></table> -->
+
+</body>
+</html>

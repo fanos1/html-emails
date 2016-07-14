@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<style type="text/css">
+		
+		/* =========== START RESET STYLES ======== */
+		body {						
+			 Margin: 0; /* Set to 0 because differnt browser different default margins. Capitalise M */
+			 padding: 0;
+		}
+        img {
+            display: block; /* Delete the gap below image */
+			border: 0 none; /* Some email clients in certain browsers will put an ugly blue border on an image with a link surrounding it */
+			/* set widht:100% if you want all images to be responsive. I have created another .resImage class which makes images reponsive.  */
+						
+			height:auto; /*makes it so the height shrinks down proportionally to the width. This protects the layout in some desktop versions of Outlook.*/
+			outline: none;
+			text-decoration: none; /* Setting the line-height further ensures that the images fit snugly into the layout. */
+			line-height: 100%;
+        }
+		table, td {
+			border-collapse: collapse; /* remove some of the extra spacing that Outlook on the desktop sometimes adds to tables. */
+			border-spacing: 0;
+			margin: 0;
+			padding: 0;
+		}	
+		.wrapper {
+			margin: 0 auto;  /* ensure the email is centered in Yahoo Mail by using auto left and right margins. We want to target the outermost table */		
+			background-color:#fff;
+    	}
+		/* =========== START RESET STYLES ======== */
+		
+		
+		/* ========= START TEMPLATE STYLES ========*/
+		a {color:#fff;}
+		p {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			line-height: 150%;
+			margin: 10px 0;
+		}
+		.list {
+			margin-left: 20px;
+		}
+		.padding10Px {
+			padding: 10px; 
+		}
+		
+		h1, h2, h3, p {
+			font-family: sans-serif;			
+		}
+		h1 {
+			font-weight: 200;
+			font-size: 30px;
+		}		
+		h2 {
+			font-size: 22px;
+			color:#DD6F00;
+			margin:0;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+			line-height:24px;
+		}
+		/* ======= PREHEADER ========*/
+		.preheader {
+			display: none;
+			color: #ffffff;
+			font-size: 2px; 
+		}
+		
+		@media only screen and (max-width: 680px) {			
+
+			table[class^="wrapper"]	{ /* place 100% inside media query so that it will stretch across screen only on mobiles, not desktop.  */
+				width: 100% !important; 		
+				max-width: 600px !important; /* the max-width property only works for block-level
+				elements. Table elements are their own kind of element: neither inline, nor block.
+				Some browsers are sticklers for this and will ignore the max-width property for
+				tables, so we are setting the table display to block as a best practice. */	 
+				display: block !important;						
+			
+			}				
+			
+			img[class^="resImage"]{		
+				width: 100% !important;	
+				height: auto !important;				
+			}
+			
+			td[class^="deviceWidth"] { /* Make columns 100% on mobile device */
+				display: block !important;
+				width: 100% !important;
+			} 
+			
+		}
+    </style>
+</head>
+
+<body style="background-color:#E4E4E4;Margin:0;" >
+<!--  
+This is 1-column responsive email. However, this is not responsive on Gmail because it relies on MEDIA QUERY to make the
+outer <table> %100.
+-->
+<table class="wrapper" align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;background-color:#fff;" >
+    <tr>
+	    <td align="center" width="100%">    
+        
+	        <p class="preheader" style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:2px;line-height:140%;margin-bottom:0;margin-top:0;display:none;margin-right:0;margin-left:0;" >
+				This and more great dates inside!
+			</p>    
+			
+            <span style="font-size:14px;" >Benzersiz bonuslar ve fırsatlar için lütfen no-reply@wonodds.com adresini güvenli eposta listenize ekleyiniz. </span>
+            
+            <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" class="innerTab">
+            	
+            	<tr style="background-color:#002236;" >
+                	<td align="center" width="100%" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+						<a href="http://www.med4ad.com/news/direct/1w/" title="Wonodds" target="_blank" style="color:#fff;" >
+                        	<img src="http://med4ad.com/news/2016/jun/10/img/logo.png" width="300" alt="Wonodds logo" class="resImage" style="display:block;border-width:0;" />
+						</a>
+                    </td>
+                </tr>
+                
+                <!-- NAVIGATION -->
+                <tr style="background-color:#002236;color:#fff;" >
+                	<td align="center" width="100%" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
+                    	<a href="http://www.med4ad.com/news/direct/1w/" title="Sporlar" target="_blank" style="color:#fff;" >Spor</a>  | 
+                        <a href="http://www.med4ad.com/news/direct/1w/" title="Canli Bahis" target="_blank" style="color:#fff;" >Canlı Bahis</a>  | 
+                        <a href="http://livedealer.365planet365.com/tr" title="Canli Casino" target="_blank" style="color:#fff;" >Canlı Casino</a> | 
+                        <a href="http://casinovip.365planet365.com/tr" title="Netent Casino" target="_blank" style="color:#fff;" >Netent Casino</a> | 
+                        <a href="http://poker.365planet365.com/tr" title="Poker" target="_blank" style="color:#fff;" >Poker</a> | 
+                        <a href="http://vsoccer365.com/guest/vfl.aspx" title="Sanal Lig" target="_blank" style="color:#fff;" >Sanal Lig</a> 
+                    </td>
+                </tr> 
+                
+             
+                
+                <!-- space -->
+                <tr><td>&nbsp;</td></tr>
+                
+                <!-- main image -->
+                <tr>
+                	<td align="center" width="100%">
+	                    <img src="http://med4ad.com/news/2016/jun/19/img/main.jpg" width="600" alt="Wonodd Exclusives" class="resImage" style="display:block;border-width:0;" > 
+                    </td>
+                </tr>
+                
+                <!-- ORANLAR -->
+                <tr>
+                	<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-width:2px;border-style:solid;border-color:#D19A00;" >
+                    	<tr>
+                        	<!-- 1st COLUMN. Apply deviceWidth Class to make it 100% on mobiles -->
+		                	<td align="center" width="50%" class="deviceWidth">
+                                <table width="100%" cellspacing="3" cellpadding="0" border="0" bgcolor="#d19a00">
+                                	<tr>
+                                    	<td  colspan="2" style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" > 
+                                        ROMANYA KAZANIR VEYA
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE MAÇTA 3+ GOL OLUR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 3.57 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE MAÇTA -2 GOL OLUR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 2.12 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE İKİ TAKIM GOL ATAR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 2.68 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" > 
+                                        KESERU GOL ATAR</td>
+                                        <td style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" >
+                                        2.85</td>
+                                    </tr>
+                                </table>    
+                                
+                                          
+                            </td>  
+                            
+                            <!-- 2ND COLUMN -->
+                            <td align="center" width="50%" class="deviceWidth">
+								<table width="100%" cellspacing="3" cellpadding="0" border="0" bgcolor="#d19a00" >
+                                	<tr>
+                                    	<td  colspan="2" style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" > 
+                                        ARNAVUTLUK KAZANIR VEYA
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE MAÇTA 3+ GOL OLUR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 5.07 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE MAÇTA -2 GOL OLUR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 2.47 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:11px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;" >
+                                        BERABERE KALIR VE İKİ TAKIM GOL ATAR</td>
+                                        <td style="background-color:#ffffff;color:#0a2035;font-size:14px;font-weight:bold;text-align:center;line-height:24px;font-family:Arial, Helvetica, sans-serif;width:40px;" >
+                                        <center> 3.23 </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" >
+                                        SADIKU GOL ATAR</td>
+                                        <td style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" >
+                                        3.65</td>
+                                    </tr>
+                                </table>
+                            </td>                      	
+                        </tr>
+                    </table>                     
+                </tr>
+                                            
+                            
+                                
+            
+            	<!-- CONTETN -->                
+           	    <tr>
+                	<td class="padding10Px" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+	                    <p style="margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;font-family:sans-serif;font-size:16px;line-height:24px;" > Değerli Wonodds Kullanıcısı,  </p>
+                    	<h2 style="font-family:sans-serif;font-size:22px;color:#DD6F00;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" > Astropay artık %15 Bonusla Wonodds'da!  </h2>                        
+                        <p style="margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;font-family:sans-serif;font-size:16px;line-height:24px;" >
+                        	Favori para yatırma yöntemlerinden olan Astropay ile artık anlık olarak para yatırıp ve çekebilirsiniz! Ayrıca Astropay'in Wonodds'a ekleneşine Özel Astropay ile para yatırmalarınıza %15 Bonus! Siz müşterilerimizin konforu için elimizden gelen herşeyi yapıyoruz!
+                        </p>
+                    </td>
+                </tr>      
+           	    <tr>
+                	<td class="padding10Px" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                    	<h2 style="font-family:sans-serif;font-size:22px;color:#DD6F00;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" > WONODDS 10 NUMARA EURO 2016 LİGİ  </h2>                        
+                        <p style="margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;font-family:sans-serif;font-size:16px;line-height:24px;" >
+                        	Euro 2016'ya Özel ilk bonusumuz ile bahis yapan herkes kazanıyor! 16 Mayıs - 11 Temmuz arası bahis yapan ve ilk 500'e giren herkes bonus kazanıyor! Çekiliş yok Kura yok, Kaybettiğin kadar değil, Çevirdiğin kadar kazan! 
+                        </p>
+                    </td>
+                </tr>     
+           	    <tr>
+                	<td class="padding10Px" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                    	<h2 style="font-family:sans-serif;font-size:22px;color:#DD6F00;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" > %100 100TL EURO 2016 Özel 10 Numara Kombine Bonusu  </h2>                        
+                        <p style="margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;font-family:sans-serif;font-size:16px;line-height:24px;" >
+                        	Wonodds'da kaybetmek yok! Salı, Cuma, Cumartesi ve Pazar günü %100 Kombine Bonusu ile Euro 2016 boyunca kombine yapmamak için hiç bir mazaretiniz yok!
+                        </p>
+                    </td>
+                </tr>     
+           	    <tr>
+                	<td class="padding10Px" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                    	<h2 style="font-family:sans-serif;font-size:22px;color:#DD6F00;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" > Her Pazartesi ve Çarşamba %20 Para Yatırma Bonusu  </h2>                        
+                        <p style="margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;font-family:sans-serif;font-size:16px;line-height:24px;" >
+                        	Wonodds'da Haziran ayı boyunca her Pazartesi ve Çarşamba %20 Depozit Bonus Kazanın!
+                        </p>
+                    </td>
+                </tr>     
+
+
+                
+                <!-- BUTTON 
+                Genrate VML buttons which also work on Outlook. Outlook uses VML language 
+                https://buttons.cm/
+                -->
+                <tr>
+                	<td align="center">
+	                    <div><!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.wonodds2016.com/Sport/Default.aspx"  arcsize="10%" strokecolor="#f8ab16" fillcolor="#DD6F00" style="height:40px;v-text-anchor:middle;width:200px;" >
+                            <w:anchorlock/>
+                            <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;" >HEMEN BAHİS YAP</center>
+                          </v:roundrect>
+                        <![endif]--><a href="http://www.wonodds2016.com/Sport/Default.aspx" style="background-color:#DD6F00;border-width:1px;border-style:solid;border-color:#f8ab16;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;" >
+                        HEMEN BAHİS YAP</a>
+                        </div>
+                    </td>
+                </tr>
+                                              
+				
+                
+                <!-- FOOTER -->
+                <tr>
+                	<td>
+                    	<table cellspacing="0" cellpadding="0" align="center" width="100%">
+                            <tr style="background-color:#EACB3C;" >
+                                <td align="right" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >										
+                                    <a target="_blank" href="https://tr-tr.facebook.com/Wonodds-Kazanc-Merkezi-202851119735284/" title="to wonodds" style="color:#fff;" >
+                                       <img src="http://med4ad.com/news/2016/jun/10/img/facebook.png" alt="facebook sayfamiz" border="0" width="43" height="43" style="display:block;border-style:none;outline-style:none;text-decoration:none;border-width:0;" >
+                                    </a>                                   
+                                </td>
+                                <td align="left" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >                                    
+                                     <a target="_blank" href="https://twitter.com/wonodds" title="wonodds" style="color:#fff;" >
+			                           <img src="http://med4ad.com/news/2016/jun/10/img/twitter.png" alt="twitter sayfamiz" border="0" width="43" height="43" style="display:block;border-style:none;outline-style:none;text-decoration:none;border-width:0;" >
+			                        </a>		                            
+                                </td>
+                            </tr>
+						</table>
+                        
+                    </td>
+                </tr>         
+                
+                <!-- opt out linkg -->
+				<tr>
+                	<td class="padding10Px" bgcolor="#e4e4e4" align="center" style="font-weight:bold;font-size:10px;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                        E-Posta adresinize e-bültenlerimizin gönderilmesini istemiyorsanız?
+                        <a  target="_blank" href="http://www.wonodds.co/nws-dr/index.php?e=#E-mail#" style="color:#000;text-decoration:underline;" >Lütfen tıklayınız</a>
+                    </td>
+                </tr>                          
+                
+            </table>
+            
+            
+    	</td>
+    </tr>    
+</table>
+</body>
+</html>

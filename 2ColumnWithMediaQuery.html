@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2 columns </title>
+<style type="text/css">	
+		/* =========== START RESET STYLES ======== */
+		body {						
+			 Margin: 0; /* Set to 0 because differnt browser different default margins. Capitalise M */
+			 padding: 0;
+		}
+        img {
+            display: block; /* Delete the gap below image */
+			border: 0 none; /* Some email clients in certain browsers will put an ugly blue border on an image with a link surrounding it */
+			/* set widht:100% if you want all images to be responsive. I have created another .resImage class which makes images reponsive.  */
+						
+			height:auto; /*makes it so the height shrinks down proportionally to the width. This protects the layout in some desktop versions of Outlook.*/
+			outline: none;
+			text-decoration: none; /* Setting the line-height further ensures that the images fit snugly into the layout. */
+			line-height: 100%;
+        }
+		table, td {
+			border-collapse: collapse; /* remove some of the extra spacing that Outlook on the desktop sometimes adds to tables. */
+			border-spacing: 0;
+			margin: 0;
+			padding: 0;
+		}	
+		.wrapper {
+			margin: 0 auto;  /* ensure the email is centered in Yahoo Mail by using auto left and right margins. We want to target the outermost table */		
+			background-color:#fff;
+    	}
+		/* =========== END RESET STYLES ======== */
+		
+	
+	/* for screen smaller than 640 */
+	@media only screen and (max-width: 640px) {
+		
+		table[class^="wrapper"]	{ /* place 100% inside media query so that it will stretch across screen only on mobiles, not desktop.  */
+			width: 100% !important; 		
+			max-width: 600px !important; /* the max-width property only works for block-level
+			elements. Table elements are their own kind of element: neither inline, nor block.
+			Some browsers are sticklers for this and will ignore the max-width property for
+			tables, so we are setting the table display to block as a best practice. */	 
+			display: block !important;						
+		
+		}
+		
+		td[class^="deviceWidth"] { /* Make columns 100% on mobile device */
+				display: block !important;
+				width: 100% !important;
+		} 
+		
+		img[class^="resImage"]{		/* Make img 100% on mobile device */
+				width: 100% !important;	
+				height: auto !important;				
+		}
+		
+	}
+	
+</style>
+</head>
+
+<body>
+
+	<table class="wrapper" align="center" border="1" cellpadding="0" cellspacing="0" width="640"> <!-- outer table fixed width -->
+    	
+     	
+        <p class="preheader" style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:2px;line-height:140%;margin-bottom:0;margin-top:0;display:none;margin-right:0;margin-left:0;" >
+			This and more great dates inside!
+		</p>
+            
+		<tr>
+			<td align="center" width="100%">
+				<a href="#" target="_blank">
+                	<img class="resImage" src="http://med4ad.com/news/2016/jun/19/img/main.jpg" width="640" alt="some title">
+                </a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center" width="100%">
+				<table align="center" border="1" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td class="mainContent" align="center" width="100%" style="padding:20px;">
+							<h1>This Week&#8217;s Exclusive Picks</h1>
+						</td>
+						
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+        
+        
+        <tr>
+        	<td align="center" width="100%">
+            	<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    
+                        <!-- 1st COLUMN. Apply deviceWidth Class to make it 100% on mobiles -->
+                        <td align="center" width="50%" class="deviceWidth">
+                            <table width="100%" cellspacing="3" cellpadding="0" border="0" bgcolor="#d19a00">
+                                <tr>
+                                    <td  colspan="2" style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" > 
+                                        ROMANYA KAZANIR VEYA
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>
+                                        At hinc diceret quaestio pro. Ea congue persius duo, quot autem qualisque ad qui, te stet vero sententiae vim. Nam in facer eruditi consetetur, feugait concludaturque ut sed. Porro accommodare at has, iusto consetetur in vim. Ut quo illum fuisset. Mel integre perpetua praesent id, audire erroribus ea sit.
+                                    </td>
+                                </tr>                         
+                            </table>                                    
+                        </td>                      
+                        <!-- 2ND COLUMN -->
+                        <td align="center" width="50%" class="deviceWidth">
+                            <table width="100%" cellspacing="3" cellpadding="0" border="0" bgcolor="#d19a00" >
+                                <tr>
+                                    <td  colspan="2" style="background-color:#000;color:#f5b41a;font-size:14px;font-weight:bold;text-align:center;line-height:16px;font-family:Arial, Helvetica, sans-serif;" > 
+                                    ARNAVUTLUK KAZANIR VEYA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        At hinc diceret quaestio pro. Ea congue persius duo, quot autem qualisque ad qui, te stet vero sententiae vim. Nam in facer eruditi consetetur, feugait concludaturque ut sed. Porro accommodare at has, iusto consetetur in vim. Ut quo illum fuisset. Mel integre perpetua praesent id, audire erroribus ea sit.
+                                    </td>
+                                </tr>                                                     
+                            </table>
+                        </td>                      	
+                        
+                    </tr>                    
+                </table>
+            </td>
+        </tr> 
+        
+        
+               
+	</table>
+</body>
+</html>
